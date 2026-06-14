@@ -8,14 +8,14 @@ package view;
  *
  * @author Alpuy
  */
-public class TYHRTFH extends javax.swing.JFrame {
+public class Registrar extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TYHRTFH.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Registrar.class.getName());
 
     /**
-     * Creates new form TYHRTFH
+     * Creates new form Registrar
      */
-    public TYHRTFH() {
+    public Registrar() {
         initComponents();
     }
 
@@ -29,7 +29,17 @@ public class TYHRTFH extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -56,7 +66,7 @@ public class TYHRTFH extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TYHRTFH().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Registrar().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
