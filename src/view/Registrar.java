@@ -34,23 +34,46 @@ public class Registrar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imag/gdfgdfgdfg.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Cinco años después de que un inexplicable mal funcionamiento provocara la muerte de 15 visitantes y el personal de una casa del terror de Halloween en su primera noche, un grupo de documentalistas viajan al sitio de la tragedia a tratar de entender lo que realmente sucedió.");
+        jLabel4.setText("Cinco años después de que un inexplicable mal funcionamiento\n provocara la muerte de 15 visitantes y el personal de una casa del\n terror de Halloween  en su primera noche, un grupo de documentalistas\n viajan al sitio de la  tragedia a tratar de entender lo que realmente sucedió.");
         jLabel4.setToolTipText("");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 230, 90));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HELL HOUSE");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imag/sinopsis.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 440));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(jLabel3))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addGap(13, 13, 13)
+                .addComponent(jLabel3)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
