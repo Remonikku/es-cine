@@ -1,16 +1,17 @@
 package model;
 
 import java.sql.Time;
+import java.time.LocalTime;
 
 public class Pelicula {
     private int idPelicula;
     private String titulo;
-    private Time duracion;
+    private LocalTime duracion;
     private String clasificacion;
     
     public Pelicula(){
     }
-    public Pelicula(int idPelicula, String titulo, Time duracion, String clasificacion){
+    public Pelicula(int idPelicula, String titulo, LocalTime duracion, String clasificacion){
         this.idPelicula = idPelicula;
         this.titulo = titulo;
         this.duracion = duracion;
@@ -28,10 +29,10 @@ public class Pelicula {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public Time getDuracion() {
+    public LocalTime getDuracion() {
         return duracion;
     }
-    public void setDuracion(Time duracion) {
+    public void setDuracion(LocalTime duracion) {
         this.duracion = duracion;
     }
     public String getClasificacion() {

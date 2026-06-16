@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/interfaces/EjemploInterface.java</file>
-            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/db/DAO.java</file>
-            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/db/Conexion.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOClientes.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Asiento.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Cliente.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Funcion.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Pelicula.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Reserva.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/ReservaAsiento.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Sala.java</file>
+            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/Conexion.java</file>
         </group>
     </open-files>
 </project-private>

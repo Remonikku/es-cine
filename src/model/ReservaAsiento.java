@@ -1,37 +1,47 @@
 package model;
 
 public class ReservaAsiento {
+
     private int idReservaAsiento;
-    private Reserva reserva;
-    private Asiento asiento;
+    private int idReserva;
+    private int idAsiento;
 
     public ReservaAsiento() {
     }
-    public ReservaAsiento(int idReservaAsiento, Reserva reserva, Asiento asiento) {
+
+    public ReservaAsiento(int idReservaAsiento, int idReserva, int idAsiento) {
         this.idReservaAsiento = idReservaAsiento;
-        this.reserva = reserva;
-        this.asiento = asiento;
+        this.idReserva = idReserva;
+        this.idAsiento = idAsiento;
     }
+
     public int getIdReservaAsiento() {
         return idReservaAsiento;
     }
+
     public void setIdReservaAsiento(int idReservaAsiento) {
         this.idReservaAsiento = idReservaAsiento;
     }
-    public Reserva getReserva() {
-        return reserva;
+
+    public int getIdReserva() {
+        return idReserva;
     }
-    public void setReserva(Reserva reserva) {
-        this.reserva = reserva;
+
+    public void setIdReserva(int idReserva) {
+        this.idReserva = idReserva;
     }
-    public Asiento getAsiento() {
-        return asiento;
+
+    public int getIdAsiento() {
+        return idAsiento;
     }
-    public void setAsiento(Asiento asiento) {
-        this.asiento = asiento;
+
+    public void setIdAsiento(int idAsiento) {
+        this.idAsiento = idAsiento;
     }
+
     @Override
     public String toString() {
-        return "ReservaAsiento{" + "idReservaAsiento=" + idReservaAsiento + ", reserva=" + reserva + ", asiento=" + asiento + '}';
+        return "ReservaAsiento{" + "idReservaAsiento=" + idReservaAsiento + ", idReserva=" + idReserva + ", idAsiento=" + idAsiento + '}';
     }
+
 }
