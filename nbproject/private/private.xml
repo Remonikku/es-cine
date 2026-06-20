@@ -6,6 +6,10 @@
             <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/db/DAOFuncion.java</file>
             <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/view/CARTELERA.java</file>
             <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/view/Pelicula2.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/Asiento.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/Cliente.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/Reserva.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/ReservaAsiento.java</file>
         </group>
     </open-files>
 </project-private>

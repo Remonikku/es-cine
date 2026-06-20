@@ -8,24 +8,14 @@ package view;
  *
  * @author Alpuy
  */
-<<<<<<<< HEAD:src/view/CARTELERA.java
-public class CARTELERA extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CARTELERA.class.getName());
-========
 public class Pelicula2 extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Pelicula2.class.getName());
->>>>>>>> main:src/view/Pelicula2.java
 
     /**
      * Creates new form Pelicula2
      */
-<<<<<<<< HEAD:src/view/CARTELERA.java
-    public CARTELERA() {
-========
     public Pelicula2() {
->>>>>>>> main:src/view/Pelicula2.java
         initComponents();
     }
 
@@ -38,24 +28,6 @@ public class Pelicula2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<<< HEAD:src/view/CARTELERA.java
-        jPanel1 = new javax.swing.JPanel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-========
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,7 +35,6 @@ public class Pelicula2 extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imag/chr.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, -1));
->>>>>>>> main:src/view/Pelicula2.java
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -90,18 +61,10 @@ public class Pelicula2 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-<<<<<<<< HEAD:src/view/CARTELERA.java
-        java.awt.EventQueue.invokeLater(() -> new CARTELERA().setVisible(true));
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-========
         java.awt.EventQueue.invokeLater(() -> new Pelicula2().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
->>>>>>>> main:src/view/Pelicula2.java
     // End of variables declaration//GEN-END:variables
 }
