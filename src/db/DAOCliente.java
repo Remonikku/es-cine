@@ -38,13 +38,12 @@ public class DAOCliente {
 
     public void crearCliente(Cliente cliente) {
         //nombre, correo, rut
-        String sql = "insert into clientes (id_camion, nombre, correo, rut) values (?,?,?,?);";
+        String sql = "insert into clientes (nombre, correo, rut) values (?,?,?);";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
-            ps.setString(1, null);
-            ps.setString(2, cliente.getNombre());
-            ps.setString(3, cliente.getCorreo());
-            ps.setString(4, cliente.getRut());
+            ps.setString(1, cliente.getNombre());
+            ps.setString(2, cliente.getCorreo());
+            ps.setString(3, cliente.getRut());
             ps.executeUpdate();
             ps.close();
 
@@ -87,7 +86,7 @@ public class DAOCliente {
 
     public void actualizarCliente(Cliente cliente) {
         String sql = "update clientes set nombre = ?, correo = ?, rut = ? where id_cliente = ?;";
-        try {
+        try { 
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
             ps.setString(1, cliente.getNombre());
             ps.setString(2, cliente.getCorreo());

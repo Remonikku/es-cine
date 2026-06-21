@@ -2,11 +2,13 @@ package model;
 
 import java.sql.Date;
 
-public class Reserva {
+public abstract class Reserva {
     private int idReserva;
     private int idCliente;
     private int idFuncion;
     private Date fechaReserva;
+    private String tipoEntrada;
+    private int precioFinal;
 
     public Reserva() {
     }
@@ -50,11 +52,26 @@ public class Reserva {
         this.fechaReserva = fechaReserva;
     }
 
+    public String getTipoEntrada() {
+        return tipoEntrada;
+    }
+
+    public void setTipoEntrada(String tipoEntrada) {
+        this.tipoEntrada = tipoEntrada;
+    }
+
+    public int getPrecioFinal() {
+        return precioFinal;
+    }
+
+    public void setPrecioFinal(int precioFinal) {
+        this.precioFinal = precioFinal;
+    }
+
+    public abstract void calcularPrecio(double precioBase);
+
     @Override
     public String toString() {
-        return "Reserva{" + "idReserva=" + idReserva + ", idCliente=" + idCliente + ", idFuncion=" + idFuncion + ", fechaReserva=" + fechaReserva + '}';
+        return "Reserva{" + "idReserva=" + idReserva + ", idCliente=" + idCliente + ", idFuncion=" + idFuncion + ", fechaReserva=" + fechaReserva + ", tipoEntrada=" + tipoEntrada + ", precioFinal=" + precioFinal + '}';
     }
-    
-    
-  
 }
