@@ -17,6 +17,11 @@ public class CARTELERA extends javax.swing.JFrame {
      */
     public CARTELERA() {
         initComponents();
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                new LoginRoleFrame().setVisible(true);
+            }
+        });
     }
 
     /**
