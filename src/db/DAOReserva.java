@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Reserva;
+import model.ReservaFactory;
 
 /**
  *
@@ -36,14 +37,15 @@ public class DAOReserva {
     }
 
     public void crearReserva(Reserva reserva) {
-        //id_reserva, fk_id_cliente, fk_id_funcion, fecha_reserva
-        String sql = "insert into reservas (id_reserva, fk_id_cliente, fk_id_funcion, fecha_reserva) values (?,?,?,?);";
+        //fk_id_cliente, fk_id_funcion, fecha_reserva, tipo_entrada, precio_final
+        String sql = "insert into reservas (fk_id_cliente, fk_id_funcion, fecha_reserva, tipo_entrada, precio_final) values (?,?,?,?,?);";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
-            ps.setString(1, null);
-            ps.setInt(2, reserva.getIdCliente());
-            ps.setInt(3, reserva.getIdFuncion());
-            ps.setDate(4, reserva.getFechaReserva());
+            ps.setInt(1, reserva.getIdCliente());
+            ps.setInt(2, reserva.getIdFuncion());
+            ps.setDate(3, reserva.getFechaReserva());
+            ps.setString(4, reserva.getTipoEntrada());
+            ps.setInt(5, reserva.getPrecioFinal());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {
@@ -57,11 +59,13 @@ public class DAOReserva {
         conexion.rs = conexion.ejecutarSelect(sql);
         Reserva reserva;
         while (conexion.rs.next()) {
-            reserva = new Reserva();
+            String tipo = conexion.rs.getString("tipo_entrada");
+            reserva = ReservaFactory.crearReservaDesdeDB(tipo);
             reserva.setIdReserva(conexion.rs.getInt("id_reserva"));
             reserva.setIdCliente(conexion.rs.getInt("fk_id_cliente"));
             reserva.setIdFuncion(conexion.rs.getInt("fk_id_funcion"));
             reserva.setFechaReserva(conexion.rs.getDate("fecha_reserva"));
+            reserva.setPrecioFinal(conexion.rs.getInt("precio_final"));
             listaReserva.add(reserva);
         }
         return listaReserva;
@@ -84,13 +88,15 @@ public class DAOReserva {
     }
 
     public void actualizarReserva(Reserva reserva) {
-        String sql = "update reservas set fk_id_cliente = ?, fk_id_funcion = ?, fecha_reserva = ? where id_reserva = ?;";
+        String sql = "update reservas set fk_id_cliente = ?, fk_id_funcion = ?, fecha_reserva = ?, tipo_entrada = ?, precio_final = ? where id_reserva = ?;";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
             ps.setInt(1, reserva.getIdCliente());
             ps.setInt(2, reserva.getIdFuncion());
             ps.setDate(3, reserva.getFechaReserva());
-            ps.setInt(4, reserva.getIdReserva());
+            ps.setString(4, reserva.getTipoEntrada());
+            ps.setInt(5, reserva.getPrecioFinal());
+            ps.setInt(6, reserva.getIdReserva());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {

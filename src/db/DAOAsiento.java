@@ -91,7 +91,7 @@ public class DAOAsiento {
             ps.setInt(1, asiento.getIdSala());
             ps.setString(2, asiento.getFila());
             ps.setInt(3, asiento.getNumero());
-            ps.setString(4, null);
+            ps.setInt(4, asiento.getIdAsiento());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {

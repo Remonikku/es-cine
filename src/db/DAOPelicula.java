@@ -38,13 +38,12 @@ public class DAOPelicula {
 
     public void crearPelicula(Pelicula pelicula) {
         //id_pelicula, titulo, duracion, clasificacion
-        String sql = "insert into peliculas (id_pelicula, titulo, duracion, clasficacion) values (?,?,?,?);";
+        String sql = "insert into peliculas (titulo, duracion, clasificacion) values (?,?,?);";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
-            ps.setString(1, null);
-            ps.setString(2, pelicula.getTitulo());
-            ps.setTime(3, Time.valueOf(pelicula.getDuracion()));
-            ps.setString(4, pelicula.getClasificacion());
+            ps.setString(1, pelicula.getTitulo());
+            ps.setTime(2, Time.valueOf(pelicula.getDuracion()));
+            ps.setString(3, pelicula.getClasificacion());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
@@ -91,7 +90,7 @@ public class DAOPelicula {
             ps.setString(1, pelicula.getTitulo());
             ps.setTime(2, Time.valueOf(pelicula.getDuracion()));
             ps.setString(3, pelicula.getClasificacion());
-            ps.setString(4, null);
+            ps.setInt(4, pelicula.getIdPelicula());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {

@@ -82,7 +82,7 @@ public class DAOSala {
     }
 
     public void actualizarSala(Sala sala) {
-        String sql = "update clientes set capacidad = ?, nombre_sala = ?, where id_sala = ?;";
+        String sql = "update salas set capacidad = ?, nombre_sala = ? where id_sala = ?;";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
             ps.setInt(1, sala.getCapacidad());

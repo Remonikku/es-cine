@@ -40,14 +40,13 @@ public class DAOFuncion {
 
     public void crearFuncion(Funcion funcion) {
         //id_funcion, fk_id_pelicula, fk_id_sala, horario, precio
-        String sql = "insert into funciones (id_funcion, fk_id_pelicula, fk_id_sala, horario, precio);";
+        String sql = "insert into funciones (fk_id_pelicula, fk_id_sala, horario, precio) values (?,?,?,?);";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
-            ps.setString(1, null);
-            ps.setInt(2, funcion.getIdPelicula());
-            ps.setInt(3, funcion.getIdSala());
-            ps.setTime(4, Time.valueOf(funcion.getHorario()));
-            ps.setDouble(5, funcion.getPrecio());
+            ps.setInt(1, funcion.getIdPelicula());
+            ps.setInt(2, funcion.getIdSala());
+            ps.setTime(3, Time.valueOf(funcion.getHorario()));
+            ps.setDouble(4, funcion.getPrecio());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
