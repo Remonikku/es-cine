@@ -18,7 +18,7 @@ import model.Cliente;
  *
  * @author Zemekis
  */
-public class DAOClientes {
+public class DAOCliente {
 
     private Conexion conexion;
 
@@ -27,7 +27,7 @@ public class DAOClientes {
      constructor de DAO
      Genera la conexion entregando los datos
      */
-    public DAOClientes() throws SQLException {
+    public DAOCliente() throws SQLException {
         conexion = new Conexion(
                 "localhost",
                 "es_cine",
@@ -36,12 +36,12 @@ public class DAOClientes {
         );
     }
 
-    public void crearClientes(Cliente cliente) {
+    public void crearCliente(Cliente cliente) {
         //nombre, correo, rut
         String sql = "insert into clientes (id_camion, nombre, correo, rut) values (?,?,?,?);";
         try {
             PreparedStatement ps = (PreparedStatement) conexion.preparar(sql);
-            ps.setInt(1, cliente.getIdCliente());
+            ps.setString(1, null);
             ps.setString(2, cliente.getNombre());
             ps.setString(3, cliente.getCorreo());
             ps.setString(4, cliente.getRut());
@@ -53,7 +53,7 @@ public class DAOClientes {
         }
     }
 
-    public List<Cliente> getClientes() throws SQLException {
+    public List<Cliente> getCliente() throws SQLException {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
         String sql = "select * from clientes;";
         conexion.rs = conexion.ejecutarSelect(sql);
