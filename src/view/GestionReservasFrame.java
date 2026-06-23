@@ -86,6 +86,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         lblHeader = new javax.swing.JLabel();
+        lblSpacer = new javax.swing.JLabel();
         sepHeader = new javax.swing.JSeparator();
         pnlForm = new javax.swing.JPanel();
         lblPeli = new javax.swing.JLabel();
@@ -123,7 +124,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         lblObserverExplan = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("ES-CINE: Panel Premium de Gestión de Reservas y Notificaciones");
+        setTitle("CineVerse MultiPlex: Panel Premium de Gestión de Reservas y Notificaciones");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -132,7 +133,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         lblHeader.setFont(new java.awt.Font("SansSerif", 1, 22)); // NOI18N
         lblHeader.setForeground(new java.awt.Color(110, 230, 240));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("ES-CINE - PANEL DE RESERVAS & NOTIFICACIONES (OBSERVER)");
+        lblHeader.setText("CineVerse MultiPlex - PANEL DE RESERVAS & NOTIFICACIONES (OBSERVER)");
         getContentPane().add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 1150, 35));
 
         sepHeader.setForeground(new java.awt.Color(130, 50, 180));
@@ -352,7 +353,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         btnCerrar.setBackground(new java.awt.Color(50, 45, 65));
         btnCerrar.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
         btnCerrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCerrar.setText("VOLVER A CARTELERA");
+        btnCerrar.setText("VOLVER");
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GestorReservas.getInstancia().removerObservador(GestionReservasFrame.this);
@@ -366,6 +367,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         lblObserverExplan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblObserverExplan.setText("<html>Tip: Registre compras (Strategy) y cree entradas (Factory). El buzón verde demuestra el patrón Observer en tiempo real notificando transacciones e incidencias.</html>");
         getContentPane().add(lblObserverExplan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 1090, 25));
+        getContentPane().add(lblSpacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 685, 1150, 30));
 
         pack();
         setLocationRelativeTo(null);
@@ -733,6 +735,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
     private javax.swing.JLabel lblPrecioBase;
     private javax.swing.JLabel lblPrecioTotal;
     private javax.swing.JLabel lblSim;
+    private javax.swing.JLabel lblSpacer;
     private javax.swing.JLabel lblSurchargeVIP;
     private javax.swing.JLabel lblTipo;
     private javax.swing.JPanel pnlForm;

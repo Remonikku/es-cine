@@ -318,9 +318,10 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
         scrollLog = new javax.swing.JScrollPane();
         txtNotificaciones = new javax.swing.JTextArea();
         btnVolver = new javax.swing.JButton();
+        lblSpacer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("ES-CINE: Portal de Reservas - Cliente");
+        setTitle("CineVerse MultiPlex: Portal de Reservas - Cliente");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -338,40 +339,40 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
         lblNombre.setForeground(new java.awt.Color(245, 240, 240));
         lblNombre.setText("Tu Nombre:");
         pnlMain.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 25, 130, 20));
-        pnlMain.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 25, 360, 22));
+        pnlMain.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 25, 370, 22));
 
         lblCorreo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblCorreo.setForeground(new java.awt.Color(245, 240, 240));
         lblCorreo.setText("Tu Correo:");
         pnlMain.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 55, 130, 20));
-        pnlMain.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 360, 22));
+        pnlMain.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 370, 22));
 
         lblRut.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblRut.setForeground(new java.awt.Color(245, 240, 240));
         lblRut.setText("Tu RUT:");
         pnlMain.add(lblRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 85, 130, 20));
-        pnlMain.add(txtRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 85, 360, 22));
+        pnlMain.add(txtRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 85, 370, 22));
 
         lblPeli.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblPeli.setForeground(new java.awt.Color(245, 240, 240));
         lblPeli.setText("Película:");
         pnlMain.add(lblPeli, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 115, 130, 20));
 
-        pnlMain.add(cmbPelicula, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 115, 360, 22));
+        pnlMain.add(cmbPelicula, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 115, 370, 22));
 
         lblFun.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblFun.setForeground(new java.awt.Color(245, 240, 240));
         lblFun.setText("Función y Horario:");
         pnlMain.add(lblFun, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 130, 20));
 
-        pnlMain.add(cmbFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 145, 360, 22));
+        pnlMain.add(cmbFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 145, 370, 22));
 
         lblAsi.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblAsi.setForeground(new java.awt.Color(245, 240, 240));
         lblAsi.setText("Asiento:");
         pnlMain.add(lblAsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 175, 130, 20));
 
-        pnlMain.add(cmbAsiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 175, 360, 22));
+        pnlMain.add(cmbAsiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 175, 370, 22));
 
         lblTipo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblTipo.setForeground(new java.awt.Color(245, 240, 240));
@@ -416,32 +417,32 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
         pnlMain.add(rdbTransferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 235, 130, 20));
 
         sepDesglose.setForeground(new java.awt.Color(130, 50, 180));
-        pnlMain.add(sepDesglose, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 500, 5));
+        pnlMain.add(sepDesglose, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 265, 510, 5));
 
         lblPrecioBase.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblPrecioBase.setForeground(new java.awt.Color(245, 240, 240));
         lblPrecioBase.setText("Precio Base Neto: $0 CLP");
-        pnlMain.add(lblPrecioBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 220, 20));
+        pnlMain.add(lblPrecioBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 275, 220, 20));
 
         lblSurchargeVIP.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblSurchargeVIP.setForeground(new java.awt.Color(245, 240, 240));
         lblSurchargeVIP.setText("Recargo VIP (50%): $0 CLP");
-        pnlMain.add(lblSurchargeVIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 305, 220, 20));
+        pnlMain.add(lblSurchargeVIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 275, 220, 20));
 
         lblIva.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         lblIva.setForeground(new java.awt.Color(245, 240, 240));
         lblIva.setText("IVA Chileno (19%): $0 CLP");
-        pnlMain.add(lblIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 220, 20));
+        pnlMain.add(lblIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 220, 20));
 
         lblPrecioTotal.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
         lblPrecioTotal.setForeground(new java.awt.Color(185, 110, 240));
         lblPrecioTotal.setText("Precio Total: $0 CLP");
-        pnlMain.add(lblPrecioTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 355, 250, 25));
+        pnlMain.add(lblPrecioTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 325, 490, 25));
 
         btnComprar.setBackground(new java.awt.Color(130, 50, 180));
         btnComprar.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
         btnComprar.setText("CONFIRMAR RESERVA Y PAGAR");
-        pnlMain.add(btnComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 250, 90));
+        pnlMain.add(btnComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 490, 45));
 
         getContentPane().add(pnlMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 60, 550, 420));
 
@@ -466,6 +467,7 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
         btnVolver.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnVolver.setText("Volver");
         getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 650, 550, 30));
+        getContentPane().add(lblSpacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 600, 25));
 
         pack();
         setLocationRelativeTo(null);
@@ -491,7 +493,7 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
         
         JOptionPane.showMessageDialog(this, 
                 "🔔 [Notificación para ti]\nReserva: #" + reserva.getIdReserva() + "\nDetalles: " + mensajeEstado, 
-                "Aviso del Cine", 
+                "Aviso CineVerse MultiPlex", 
                 JOptionPane.WARNING_MESSAGE);
     }
 
@@ -514,6 +516,7 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
     private javax.swing.JLabel lblPrecioBase;
     private javax.swing.JLabel lblPrecioTotal;
     private javax.swing.JLabel lblRut;
+    private javax.swing.JLabel lblSpacer;
     private javax.swing.JLabel lblSurchargeVIP;
     private javax.swing.JLabel lblTipo;
     private javax.swing.JPanel pnlLog;
