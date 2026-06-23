@@ -55,9 +55,10 @@ public class LoginRoleFrame extends JFrame {
         btnCliente = new javax.swing.JButton();
         btnCajero = new javax.swing.JButton();
         btnAdmin = new javax.swing.JButton();
+        lblSpacer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("ES-CINE: Acceso al Sistema");
+        setTitle("CineVerse MultiPlex: Acceso al Sistema");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -78,6 +79,7 @@ public class LoginRoleFrame extends JFrame {
         btnAdmin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnAdmin.setText("Administrador (Gestión Total)");
         getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 320, 50));
+        getContentPane().add(lblSpacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 480, 30));
 
         pack();
         setLocationRelativeTo(null);
@@ -95,6 +97,7 @@ public class LoginRoleFrame extends JFrame {
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnCajero;
     private javax.swing.JButton btnCliente;
+    private javax.swing.JLabel lblSpacer;
     private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }

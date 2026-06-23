@@ -970,6 +970,8 @@ public class AdminFrame extends JFrame {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
+        lblRightSpacer = new javax.swing.JLabel();
+        lblBottomSpacer = new javax.swing.JLabel();
         tabbedPane = new javax.swing.JTabbedPane();
         pnlPeliculas = new javax.swing.JPanel();
         scrollPeliculas = new javax.swing.JScrollPane();
@@ -1067,7 +1069,7 @@ public class AdminFrame extends JFrame {
         btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("ES-CINE: Panel de Administración");
+        setTitle("CineVerse MultiPlex: Panel de Administración");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1075,7 +1077,7 @@ public class AdminFrame extends JFrame {
         lblHeader.setForeground(new java.awt.Color(110, 230, 240));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("PANEL DE ADMINISTRACIÓN Y GESTIÓN DE ENTIDADES");
-        getContentPane().add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 810, 30));
+        getContentPane().add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 850, 30));
 
         pnlPeliculas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1369,6 +1371,8 @@ public class AdminFrame extends JFrame {
         btnVolver.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnVolver.setText("Volver");
         getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, 810, 30));
+        getContentPane().add(lblRightSpacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 20, 1));
+        getContentPane().add(lblBottomSpacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 850, 20));
 
         pack();
         setLocationRelativeTo(null);
@@ -1426,6 +1430,7 @@ public class AdminFrame extends JFrame {
     private javax.swing.JLabel lblCliCorreo;
     private javax.swing.JLabel lblCliNombre;
     private javax.swing.JLabel lblCliRut;
+    private javax.swing.JLabel lblBottomSpacer;
     private javax.swing.JLabel lblFunHorario;
     private javax.swing.JLabel lblFunPelicula;
     private javax.swing.JLabel lblFunPrecio;
@@ -1436,6 +1441,7 @@ public class AdminFrame extends JFrame {
     private javax.swing.JLabel lblPeliTitulo;
     private javax.swing.JLabel lblRaAsiento;
     private javax.swing.JLabel lblRaReserva;
+    private javax.swing.JLabel lblRightSpacer;
     private javax.swing.JLabel lblResCliente;
     private javax.swing.JLabel lblResFecha;
     private javax.swing.JLabel lblResFuncion;
