@@ -503,6 +503,7 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
         JTextField txtNombre = new JTextField();
         JTextField txtCorreo = new JTextField();
         JTextField txtRut = new JTextField();
+        RutHelper.setupRutField(txtRut);
 
         Object[] message = {
             "Nombre Completo:", txtNombre,
@@ -518,6 +519,16 @@ public class GestionReservasFrame extends JFrame implements ReservaObserver {
 
             if (nombre.isEmpty() || rut.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "El nombre y RUT son campos obligatorios.", "Campos vacíos", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            if (!RutHelper.isValidRut(rut)) {
+                JOptionPane.showMessageDialog(this, "El RUT ingresado no es válido (formato esperado: XX.XXX.XXX-X).", "RUT Inválido", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
+            if (!RutHelper.isValidEmail(correo)) {
+                JOptionPane.showMessageDialog(this, "El correo electrónico debe contener un arroba (@).", "Correo Inválido", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 

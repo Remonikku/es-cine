@@ -117,6 +117,8 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
                 dispose();
             }
         });
+
+        RutHelper.setupRutField(txtRut);
     }
 
     private void cargarDatosCombo() {
@@ -200,6 +202,16 @@ public class ClienteFrame extends JFrame implements ReservaObserver {
 
         if (nombre.isEmpty() || rut.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Por favor introduce tu Nombre y RUT para realizar la compra.", "Datos Incompletos", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        if (!RutHelper.isValidRut(rut)) {
+            JOptionPane.showMessageDialog(this, "El RUT ingresado no es válido (formato esperado: XX.XXX.XXX-X).", "RUT Inválido", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        if (!RutHelper.isValidEmail(correo)) {
+            JOptionPane.showMessageDialog(this, "El correo electrónico debe contener un arroba (@).", "Correo Inválido", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
