@@ -227,6 +227,8 @@ public class AdminFrame extends JFrame {
                 dispose();
             }
         });
+
+        RutHelper.setupRutField(txtCliRut);
     }
 
     private void cargarTodo() {
@@ -392,7 +394,7 @@ public class AdminFrame extends JFrame {
         int row = tblPeliculas.getSelectedRow();
         selectedPeliId = (int) tblPeliculas.getValueAt(row, 0);
         txtPeliTitulo.setText((String) tblPeliculas.getValueAt(row, 1));
-        txtPeliClasificacion.setText((String) tblPeliculas.getValueAt(row, 2));
+        cmbPeliClasificacion.setSelectedItem(tblPeliculas.getValueAt(row, 2));
         txtPeliDuracion.setText(tblPeliculas.getValueAt(row, 3).toString());
     }
 
@@ -504,7 +506,7 @@ public class AdminFrame extends JFrame {
     private void crearPelicula() {
         try {
             String titulo = txtPeliTitulo.getText().trim();
-            String clas = txtPeliClasificacion.getText().trim();
+            String clas = cmbPeliClasificacion.getSelectedItem() != null ? cmbPeliClasificacion.getSelectedItem().toString().trim() : "";
             String durStr = txtPeliDuracion.getText().trim();
 
             if (titulo.isEmpty() || clas.isEmpty() || durStr.isEmpty()) {
@@ -536,7 +538,7 @@ public class AdminFrame extends JFrame {
         if (selectedPeliId == -1) { JOptionPane.showMessageDialog(this, "Seleccione una película."); return; }
         try {
             String titulo = txtPeliTitulo.getText().trim();
-            String clas = txtPeliClasificacion.getText().trim();
+            String clas = cmbPeliClasificacion.getSelectedItem() != null ? cmbPeliClasificacion.getSelectedItem().toString().trim() : "";
             String durStr = txtPeliDuracion.getText().trim();
 
             LocalTime duracion;
@@ -575,7 +577,7 @@ public class AdminFrame extends JFrame {
     private void limpiarPeliculas() {
         selectedPeliId = -1;
         txtPeliTitulo.setText("");
-        txtPeliClasificacion.setText("");
+        cmbPeliClasificacion.setSelectedIndex(0);
         txtPeliDuracion.setText("");
         tblPeliculas.clearSelection();
     }
@@ -791,6 +793,16 @@ public class AdminFrame extends JFrame {
                 return;
             }
 
+            if (!RutHelper.isValidRut(rut)) {
+                JOptionPane.showMessageDialog(this, "El RUT ingresado no es válido (formato esperado: XX.XXX.XXX-X).");
+                return;
+            }
+
+            if (!RutHelper.isValidEmail(correo)) {
+                JOptionPane.showMessageDialog(this, "El correo electrónico debe contener un arroba (@).");
+                return;
+            }
+
             Cliente c = new Cliente(0, nombre, correo.isEmpty() ? "Sin correo" : correo, rut);
             daoCliente.crearCliente(c);
             JOptionPane.showMessageDialog(this, "Cliente creado.");
@@ -807,6 +819,21 @@ public class AdminFrame extends JFrame {
             String nombre = txtCliNombre.getText().trim();
             String correo = txtCliCorreo.getText().trim();
             String rut = txtCliRut.getText().trim();
+
+            if (nombre.isEmpty() || rut.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Nombre y RUT son obligatorios.");
+                return;
+            }
+
+            if (!RutHelper.isValidRut(rut)) {
+                JOptionPane.showMessageDialog(this, "El RUT ingresado no es válido (formato esperado: XX.XXX.XXX-X).");
+                return;
+            }
+
+            if (!RutHelper.isValidEmail(correo)) {
+                JOptionPane.showMessageDialog(this, "El correo electrónico debe contener un arroba (@).");
+                return;
+            }
 
             Cliente c = new Cliente(selectedCliId, nombre, correo, rut);
             daoCliente.actualizarCliente(c);
@@ -979,7 +1006,7 @@ public class AdminFrame extends JFrame {
         lblPeliTitulo = new javax.swing.JLabel();
         txtPeliTitulo = new javax.swing.JTextField();
         lblPeliClasificacion = new javax.swing.JLabel();
-        txtPeliClasificacion = new javax.swing.JTextField();
+        cmbPeliClasificacion = new javax.swing.JComboBox<>();
         lblPeliDuracion = new javax.swing.JLabel();
         txtPeliDuracion = new javax.swing.JTextField();
         btnPeliCrear = new javax.swing.JButton();
@@ -1097,7 +1124,8 @@ public class AdminFrame extends JFrame {
         lblPeliClasificacion.setForeground(new java.awt.Color(255, 255, 255));
         lblPeliClasificacion.setText("Clasificación:");
         pnlPeliculas.add(lblPeliClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 100, 20));
-        pnlPeliculas.add(txtPeliClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, 180, 25));
+        cmbPeliClasificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TE", "TE+7", "14", "18", "18+", "G", "PG", "PG-13", "R" }));
+        pnlPeliculas.add(cmbPeliClasificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, 180, 25));
 
         lblPeliDuracion.setForeground(new java.awt.Color(255, 255, 255));
         lblPeliDuracion.setText("Duración (HH:MM:SS):");
@@ -1478,7 +1506,7 @@ public class AdminFrame extends JFrame {
     private javax.swing.JTextField txtCliRut;
     private javax.swing.JTextField txtFunHorario;
     private javax.swing.JTextField txtFunPrecio;
-    private javax.swing.JTextField txtPeliClasificacion;
+    private javax.swing.JComboBox<String> cmbPeliClasificacion;
     private javax.swing.JTextField txtPeliDuracion;
     private javax.swing.JTextField txtPeliTitulo;
     private javax.swing.JTextField txtResFecha;

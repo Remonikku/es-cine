@@ -3,20 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/ReservaAsiento.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/model/Sala.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/Conexion.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAO.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOFuncion.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOAsiento.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOPelicula.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOReserva.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOSala.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOReservaAsiento.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/db/DAOCliente.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/view/CARTELERA.java</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/es_cine.sql</file>
-            <file>file:/C:/Users/nicol/Documents/NetBeansProjects/Proyecto_es_cine/src/view/GestionReservasFrame.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/PagoEfectivo.java</file>
+            <file>file:/C:/Users/dlobo/OneDrive/Desktop/Proyecto/es-cine/src/model/PagoTransferencia.java</file>
         </group>
     </open-files>
 </project-private>

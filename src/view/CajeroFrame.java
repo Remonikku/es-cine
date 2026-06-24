@@ -223,6 +223,7 @@ public class CajeroFrame extends JFrame implements ReservaObserver {
         JTextField txtNuevoNombre = new JTextField();
         JTextField txtNuevoCorreo = new JTextField();
         JTextField txtNuevoRut = new JTextField();
+        RutHelper.setupRutField(txtNuevoRut);
         
         Object[] message = {
             "RUT (obligatorio):", txtNuevoRut,
@@ -238,6 +239,16 @@ public class CajeroFrame extends JFrame implements ReservaObserver {
             
             if (rut.isEmpty() || nombre.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Debe ingresar RUT y Nombre para el cliente.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (!RutHelper.isValidRut(rut)) {
+                JOptionPane.showMessageDialog(this, "El RUT ingresado no es válido (formato esperado: XX.XXX.XXX-X).", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (!RutHelper.isValidEmail(correo)) {
+                JOptionPane.showMessageDialog(this, "El correo electrónico debe contener un arroba (@).", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             
